@@ -10,7 +10,6 @@ class User(models.Model):
 
         def __str__(self):
                 return self.name
-
 class Annoucement(models.Model):
         department=models.CharField(max_length=300)
         description=models.CharField(max_length=300)
@@ -22,4 +21,5 @@ class Annoucement(models.Model):
                 
         def __str__(self):
                 return self.department
+
 
