@@ -1,15 +1,12 @@
-from rest_framework import serializers 
-from users.models import Annoucement
+from rest_framework import serializers
+from .models import User,Announcement
 
-class AnnouncementSerialiazer(serializers.Serializer):
-        
-        department=serializers.CharField(max_length=300)
-        description=serializers.CharField(max_length=300)
-        datecreated =serializers.DateField()
-        image=serializers.CharField(max_length=100)
-        heading=serializers.CharField(max_length=100)
-        likes=serializers.IntegerField()
-        unlikes=serializers.IntegerField()
+class UserSerializer(serializers.ModelSerializer):
+        class Meta:
+                model = User
+                fields = ['id', 'firstname', 'lastimage', 'email', 'grade', 'image', 'occupation']
 
-        def create(self, data):
-                return Annoucement.objects.create(**data)
+class AnnouncementSerializer(serializers.ModelSerializer):
+        class Meta:
+                model = Announcement
+                fields = ['id', 'department', 'description', 'datecreated', 'image', 'tiltle', 'likes', 'unlikes']
