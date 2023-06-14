@@ -6,7 +6,7 @@ class UserSerializer(serializers.ModelSerializer):
                 model = User
                 fields = ['id', 'firstname', 'lastimage', 'email', 'grade', 'image', 'occupation']
 
-class AnnouncementSerializer(serializers.ModelSerializer):
+class AnnouncementSerialiazer(serializers.ModelSerializer):
         class Meta:
                 model = Announcement
                 fields = ['id', 'department', 'description', 'datecreated', 'image', 'tiltle', 'likes', 'unlikes']

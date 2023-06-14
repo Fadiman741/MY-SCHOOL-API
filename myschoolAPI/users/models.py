@@ -36,7 +36,7 @@ class Post(models.Model):
         content = models.TextField()
         created_at = models.DateTimeField(auto_now_add=True)
 
-         # Add any additional fields or methods for your posts
+        # Add any additional fields or methods for your posts
 
 class Notification(models.Model):
         user = models.ForeignKey(User, on_delete=models.CASCADE)
