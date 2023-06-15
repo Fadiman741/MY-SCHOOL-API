@@ -41,7 +41,7 @@ def update_announcement(request,pk):
         
         if request.method == 'DELETE':
                 announcement.delete
-                return "Property deleted successfull"
+                return "Announcement deleted successfull"
         
 
 # =============================MASSEGES=================================
@@ -64,6 +64,7 @@ def send_messages(request):
         else:
                 return Response(serializer.errors)
         
+        
 @api_view(['PUT','GET', 'DELETE'])
 def update_messages(request,pk):
         messages = Message.objects.get(pk=pk)
@@ -82,9 +83,7 @@ def update_messages(request,pk):
                 messages.delete
                 return "message deleted successfull"
         
-        
 # =============================POSTS=================================
-
 
 @api_view(['GET'])
 def posts(request):
