@@ -6,13 +6,15 @@ class User(models.Model):
         email=models.CharField(max_length=20)
         grade=models.CharField(max_length=20)
         image=models.CharField(max_length=100)
+        datecreated =models.DateField()
+
         occupation=models.CharField(max_length=100) # Teacher / Department / Student / Tutor
 
         def __str__(self):
                 return self.name
 class Announcement(models.Model):
         department=models.CharField(max_length=300)
-        description=models.CharField(max_length=300)
+        description=models.CharField(max_length=10000)
         datecreated =models.DateField()
         image=models.CharField(max_length=100)
         tiltle=models.CharField(max_length=100)
