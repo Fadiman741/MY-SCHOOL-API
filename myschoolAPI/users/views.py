@@ -121,4 +121,3 @@ def update_post(request,pk):
                 post.delete
                 return "Post deleted successfull"
         
-        
